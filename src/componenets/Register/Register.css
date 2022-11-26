@@ -1,0 +1,11 @@
+.main {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  width: 50%;
+  height: 25%;
+  transform: translate(-50%, -50%);
+}
+.error {
+  color: red;
+}
