@@ -4,6 +4,8 @@ import Register from './componenets/Register/Register';
 import { Route, Routes } from 'react-router-dom'
 import Login from './componenets/Login/login';
 import Home from './componenets/Home/home';
+import AdminLogin from './componenets/Admin/adminLogin';
+import AdminHome from './componenets/Admin/home';
 
 function App() {
   return (
@@ -11,6 +13,10 @@ function App() {
       <div className="App">
         <Routes>
           <Route exact path='/' element={<Login />} />
+          <Route exact path='/admin' element={<AdminLogin />} />
+          <Route exact path='/admin/home' element={<AdminHome />} />
+
+
           <Route path='/home' element={<Home />} />
           <Route path='/register' element={<Register />} />
         </Routes>

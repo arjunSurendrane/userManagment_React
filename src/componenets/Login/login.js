@@ -13,9 +13,32 @@ export default function Login() {
   const [errormsg, setErrorMessage] = useState("");
   const history = useNavigate();
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
     console.log(email, password);
-    history("/home");
+    e.preventDefault();
+    axios
+      .post(`http://127.0.0.1:3000/login`, {
+        email,
+        password,
+      })
+      .then((response) => {
+        console.log(response);
+        if (response.data.error) {
+          setErrorMessage("something went wrong");
+          setError(true);
+          setTimeout(() => {
+            setError(false);
+          }, 5000);
+        } else if (response.data.status) {
+          history("/home");
+        } else {
+          setErrorMessage(response.data.message);
+          setError(true);
+          setTimeout(() => {
+            setError(false);
+          }, 5000);
+        }
+      });
   };
   return (
     <>
