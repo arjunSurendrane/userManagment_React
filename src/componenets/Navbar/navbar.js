@@ -20,7 +20,7 @@ function Header() {
               <Link to={"/home"}>Home</Link>
             </Nav.Link>
             <Nav.Link className="text-dark">
-              <Link to={"/status"}>Status</Link>
+              <Link to={"/requestStatus"}>Status</Link>
             </Nav.Link>
             <NavDropdown title="Information" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Status</NavDropdown.Item>

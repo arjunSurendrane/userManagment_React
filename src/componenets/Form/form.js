@@ -3,6 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import AlerMessage from "../Alert/alert";
+import cookies from "../Cookie/getCookie";
 import "./form.css";
 import { useForm } from "./useForm";
 export default function Incubulation({ onClose }) {
@@ -13,10 +14,16 @@ export default function Incubulation({ onClose }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const cookie = cookies('userJwt')
+    console.log(cookie)
     console.log(value);
     axios
       .post("http://127.0.0.1:3000/incubulation", {
         ...value,
+      }, {
+        headers: {
+          'Authorization': `Bearer ${cookie}`
+        }
       })
       .then((res) => {
         if (res.data.incubulation) {

@@ -3,7 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./table.css";
 import { Button } from "react-bootstrap";
 
-export default function Table(props) {
+export default function Table({ data }) {
+  console.log(data);
   return (
     <>
       <div className="tableMain">
@@ -15,21 +16,30 @@ export default function Table(props) {
                 <th scope="col">Name</th>
                 <th scope="col">Company Name</th>
                 <th scope="col">Company Details</th>
-                {props.Heading && <th scope="col"> {props.Heading} </th>}
+                <th scope="col">Status</th>
+                <th scope="col">Slot</th>
                 <th>Action</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                {props.Heading && <td>18/06/2022</td>}
-                <td>
-                  <Button className="button">Open</Button>
-                </td>
-              </tr>
+              {data.map((obj, key) => (
+                <tr>
+                  <td>{key + 1}</td>
+                  <td>{obj.businesProposal}</td>
+                  <td>{obj.companyName}</td>
+                  <td>{obj.background}</td>
+                  <td>{obj.status}</td>
+                  <td>
+                    {" "}
+                    {obj.status == "Booked"
+                      ? obj.BookingDate.split("T")[0]
+                      : "Waiting List"}
+                  </td>
+                  <td>
+                    <Button className="button">Open</Button>
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>

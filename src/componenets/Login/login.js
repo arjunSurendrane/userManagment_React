@@ -6,6 +6,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import AlerMessage from "../Alert/alert";
 import { Link, useNavigate } from "react-router-dom";
+import createCookie from "../Cookie/createCookie";
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -15,11 +16,15 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     console.log(email, password);
+
     e.preventDefault();
     axios
       .post(`http://127.0.0.1:3000/login`, {
+
+
         email,
         password,
+
       })
       .then((response) => {
         console.log(response);
@@ -30,7 +35,8 @@ export default function Login() {
             setError(false);
           }, 5000);
         } else if (response.data.status) {
-          localStorage.token = response.data.token
+          let token = response.data.token
+          createCookie('userJwt', token)
           history("/home");
         } else {
           setErrorMessage(response.data.message);

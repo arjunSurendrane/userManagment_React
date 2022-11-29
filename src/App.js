@@ -10,6 +10,8 @@ import ApplicationList from './componenets/Admin/ApplicationList/application';
 import PendingList from './componenets/Admin/pendingList';
 import SlotBookingStatus from './componenets/Admin/slotbooking';
 import BookingStatus from './componenets/Admin/bookingStatus';
+import UserControl from './componenets/Admin/userControl';
+import RequestStatus from './componenets/UserRequestStatus/requestStatus';
 
 function App() {
   useEffect(() => {
@@ -25,10 +27,12 @@ function App() {
           <Route exact path='/admin/pendingRequest' element={<PendingList />} />
           <Route exact path='/admin/slotBookingStatus' element={<SlotBookingStatus />} />
           <Route exact path='/admin/book' element={<BookingStatus />} />
+          <Route exact path='/admin/userController' element={<UserControl />} />
           {/* <Route path='/admin/applicationList' element={<ApplicationList />} /> */}
 
 
           <Route path='/home' element={<Home />} />
+          <Route path='/requestStatus' element={<RequestStatus />} />
           <Route path='/register' element={<Register />} />
         </Routes>
       </div>

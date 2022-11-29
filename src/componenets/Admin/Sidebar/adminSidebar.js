@@ -46,6 +46,7 @@ export default function AdminSidebar() {
           { titile: "Pending Requests", path: "/admin/pendingRequest" },
           { titile: "Book", path: "/admin/book" },
           { titile: "Bookin Status", path: "/admin/slotBookingStatus" },
+          { titile: "Users", path: "/admin/userController" },
         ].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton
