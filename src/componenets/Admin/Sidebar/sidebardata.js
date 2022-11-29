@@ -2,19 +2,19 @@
 
 export const sidebardata = [
     {
-        title: 'users',
+        title: 'Request',
         link: '/admin/users'
     },
     {
-        title: 'request',
+        title: 'Pending Request',
         link: '/admin/request'
     },
     {
-        title: 'slot',
+        title: 'Slot Booking',
         link: '/admin/slot'
     },
     {
-        title: 'pending list',
+        title: 'Appointment Details',
         link: '/admin/pendingList'
     },
 

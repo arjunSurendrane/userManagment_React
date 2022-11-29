@@ -1,15 +1,15 @@
 import React from "react";
-import Table from "../Table/table";
 import AdminHeader from "./Navbar/navbar";
+import Slot from "./Slot/slot";
 
-export default function AdminHome() {
+export default function BookingStatus() {
   return (
     <div>
       <div className="row">
         <AdminHeader />
-        <h1>Home page</h1>
+        <h1>BookingStatus</h1>
 
-        <Table />
+        <Slot />
       </div>
     </div>
   );

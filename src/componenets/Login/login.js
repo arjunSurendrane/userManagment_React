@@ -30,6 +30,7 @@ export default function Login() {
             setError(false);
           }, 5000);
         } else if (response.data.status) {
+          localStorage.token = response.data.token
           history("/home");
         } else {
           setErrorMessage(response.data.message);

@@ -1,0 +1,21 @@
+.tableStyle {
+  width: 50%;
+  border: 1px solid black;
+}
+.tableMain {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+.button {
+  background-color: rgb(209, 209, 209);
+  border: 1px solid rgb(193, 193, 193);
+  color: black;
+
+  text-align: center;
+}
+.button:hover {
+  background-color: rgb(137, 137, 137);
+  border: 1px solid rgb(193, 193, 193);
+}

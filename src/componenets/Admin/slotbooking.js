@@ -2,14 +2,14 @@ import React from "react";
 import Table from "../Table/table";
 import AdminHeader from "./Navbar/navbar";
 
-export default function AdminHome() {
+export default function SlotBookingStatus() {
   return (
     <div>
       <div className="row">
         <AdminHeader />
-        <h1>Home page</h1>
 
-        <Table />
+        <h1>Slot Booking Status</h1>
+        <Table Heading={"Date&Time"} />
       </div>
     </div>
   );

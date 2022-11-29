@@ -1,0 +1,25 @@
+.slots {
+  background-color: rgb(51, 51, 49);
+  height: 100px;
+  margin: 2rem;
+  text-align: center;
+  padding-top: 30px;
+  color: white;
+  cursor: pointer;
+}
+.slots:hover {
+  background-color: rgb(69, 69, 69);
+}
+
+.mainDiv {
+  display: flex;
+  justify-content: space-between;
+}
+.formControl {
+  background-color: grey;
+  border-radius: 5px;
+}
+
+.formControl option {
+  border-radius: 5px;
+}

@@ -1,13 +1,14 @@
-
-import React from 'react'
-import Alert from 'react-bootstrap/Alert';
+import React from "react";
+import Alert from "react-bootstrap/Alert";
 
 export default function AlerMessage(props) {
-    return (
-        <>
-            <Alert variant='danger'>
-                {props.error}!
-            </Alert>
-        </>
-    )
+  return (
+    <>
+      <div className="alert">
+        <Alert variant={props.varient ? "success" : "danger"}>
+          {props.error}!
+        </Alert>
+      </div>
+    </>
+  );
 }
