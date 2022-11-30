@@ -22,11 +22,7 @@ function Header() {
             <Nav.Link className="text-dark">
               <Link to={"/requestStatus"}>Status</Link>
             </Nav.Link>
-            <NavDropdown title="Information" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Status</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.2">Slot&time</NavDropdown.Item>
-            </NavDropdown>
+
           </Nav>
         </Navbar.Collapse>
       </Container>

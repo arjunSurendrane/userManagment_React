@@ -93,7 +93,7 @@ export default function Table({ data, action }) {
                   <th scope="col">Company Name</th>
                   <th scope="col">Company Details</th>
                   <th scope="col">City</th>
-                  <th scope="col">State</th>
+                  <th scope="col">Address</th>
 
                   <th scope="col">Status</th>
                   <th scope="col">Slot</th>
@@ -109,13 +109,13 @@ export default function Table({ data, action }) {
                     <td>{obj.companyName}</td>
                     <td>{obj.background}</td>
                     <td>{obj.city}</td>
-                    <td>{obj.state}</td>
+                    <td>{obj.address}</td>
 
                     <td>{obj.status}</td>
                     <td>
                       {console.log({ status: obj.BookingDate })}
                       {obj.status === "Booked"
-                        ? obj.BookingDate
+                        ? obj.BookingDate.split("T")[0]
                         : "Waiting List"}
                     </td>
                     <td>
