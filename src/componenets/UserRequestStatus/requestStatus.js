@@ -24,7 +24,7 @@ export default function RequestStatus() {
     <div>
       <Header />
       <h1>Booking Status</h1>
-      {incubation && <Table data={[incubation]} />}
+      {incubation && <Table data={[incubation]} action={"completed"} />}
     </div>
   );
 }

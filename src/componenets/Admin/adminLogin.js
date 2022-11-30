@@ -6,6 +6,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import AlerMessage from "../Alert/alert";
 import { Link, useNavigate } from "react-router-dom";
+import createCookie from "../Cookie/createCookie";
 export default function AdminLogin() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -30,7 +31,9 @@ export default function AdminLogin() {
                         setError(false);
                     }, 5000);
                 } else if (response.data.status) {
-                    history("/home");
+                    const token = response.data.token
+                    createCookie('adminJwt', token)
+                    history("/admin/home");
                 } else {
                     response.data.message ?
                         setErrorMessage(response.data.message) : setErrorMessage('something went wrong');

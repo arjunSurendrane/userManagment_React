@@ -1,5 +1,4 @@
 .tableStyle {
-  width: 50%;
   border: 1px solid black;
 }
 .tableMain {
@@ -18,4 +17,18 @@
 .button:hover {
   background-color: rgb(137, 137, 137);
   border: 1px solid rgb(193, 193, 193);
+}
+.modalForm input {
+  border: none;
+  margin-left: 5px;
+}
+.modalForm input:scope {
+  border: none;
+  margin-left: 5px;
+}
+.modalForm label {
+  font-weight: bolder;
+}
+.buttons {
+  text-align: center;
 }

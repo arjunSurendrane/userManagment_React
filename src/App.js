@@ -26,7 +26,7 @@ function App() {
           <Route exact path='/admin/home' element={<AdminHome />} />
           <Route exact path='/admin/pendingRequest' element={<PendingList />} />
           <Route exact path='/admin/slotBookingStatus' element={<SlotBookingStatus />} />
-          <Route exact path='/admin/book' element={<BookingStatus />} />
+          {/* <Route exact path='/admin/book' element={<BookingStatus />} /> */}
           <Route exact path='/admin/userController' element={<UserControl />} />
           {/* <Route path='/admin/applicationList' element={<ApplicationList />} /> */}
 

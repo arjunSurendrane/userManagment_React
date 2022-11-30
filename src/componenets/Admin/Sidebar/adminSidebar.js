@@ -44,7 +44,6 @@ export default function AdminSidebar() {
         {[
           { titile: "Request", path: "/admin/home" },
           { titile: "Pending Requests", path: "/admin/pendingRequest" },
-          { titile: "Book", path: "/admin/book" },
           { titile: "Bookin Status", path: "/admin/slotBookingStatus" },
           { titile: "Users", path: "/admin/userController" },
         ].map((text, index) => (
